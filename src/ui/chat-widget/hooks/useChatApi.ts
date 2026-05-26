@@ -2,7 +2,7 @@ import { useCallback, useRef, useState } from "react";
 
 import type { ChatApiError, ChatMessage, QueryRequest, QueryResponse } from "../types";
 
-const CHAT_API_URL = process.env.CHAT_API_URL ?? "/api/chat/v1/query";
+const CHAT_API_URL = process.env.CHAT_API_URL ?? "/api/oma-chat/v1/query";
 
 interface UseChatApiResult {
   sendMessage: (
