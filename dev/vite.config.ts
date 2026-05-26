@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => {
    */
   const target = env.MIGRATION_PLANNER_TARGET_HOST ?? DEFAULT_TARGET_HOST;
 
-  const chatApiUrl = env.CHAT_API_URL ?? "/api/chat/v1/query";
+  const chatApiUrl = env.CHAT_API_URL ?? "/api/oma-chat/v1/query";
   const chatApiTarget = env.CHAT_API_TARGET_HOST ?? DEFAULT_CHAT_API_HOST;
 
   const config: UserConfig = {
@@ -73,11 +73,11 @@ export default defineConfig(({ mode }) => {
                 )
               : path,
         },
-        "/api/chat": {
+        "/api/oma-chat": {
           target: chatApiTarget,
           secure: false,
           changeOrigin: true,
-          rewrite: (path: string) => path.replace(/^\/api\/chat/, ""),
+          rewrite: (path: string) => path.replace(/^\/api\/oma-chat/, ""),
         },
       },
     },
